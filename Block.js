@@ -8,7 +8,9 @@ class Block{
         this.prevHash = prevHash;
     }
 
-    getHash(){ return this.prevHash + this.TimeStamp + JSON.stringify(this.Transaction) }
+    getHash(){ //some sort of cipheralgorithm 
+        
+    }
 }
 
 export default Block;
