@@ -11,7 +11,14 @@ class Block{
 
     getHash(){ //cryptographic hash algorithm
         return SHA256(this.prevHash + this.TimeStamp + JSON.stringify(this.Transaction)).toString();
-        //not what goes in parenthesis, but using SHA256, it's pseudorandom algorithm for generating hash
+    }
+    
+    toString(){
+        return this.Hash.substring(0,10) + " " +  this.TimeStamp + " " + this.prevHash.substring(0,10) + this.Transaction;
+    }
+
+    Genesis(){
+        return new this("0000000000","Genesis Time", ""); 
     }
 }
 
