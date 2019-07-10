@@ -2,7 +2,7 @@ import SHA256 from "crypto.js";
 
 class Block{
 
-    constructor (prevHash="", TimeStamp,Transaction){
+    constructor (prevHash, TimeStamp,Transaction){
         this.Hash = getHash();
         this.TimeStamp = TimeStamp;
         this.Transaction = Transaction;
@@ -14,7 +14,7 @@ class Block{
     }
     
     toString(){
-        return this.Hash.substring(0,10) + " " +  this.TimeStamp + " " + this.prevHash.substring(0,10) + this.Transaction;
+        return this.Hash.substring(0,10) + " " +  this.TimeStamp + " " + this.prevHash.substring(0,10) + " "+ this.Transaction;
     }
 
     Genesis(){

@@ -1,5 +1,5 @@
 
-class Transaction{
+class Transaction {
 
     constructor(senderId, receiverId, amount){
         this.senderId = senderId;
